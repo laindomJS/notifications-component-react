@@ -1,19 +1,6 @@
-import { useEffect, useState } from 'react'
 import { Flex, Heading, Button, Box } from '@chakra-ui/react'
-import notificationsData from '../data.json'
 
-export const NotificationsState = () => {
-  const [notifications, setNotifications] = useState(null)
-
-  useEffect(() => {
-    const { newNotifications } = notificationsData
-    setNotifications(newNotifications)
-  }, [])
-
-  const markAllAsRead = () => {
-    setNotifications(0)
-  }
-
+export const NotificationsState = ({ notifications, handleCLick }) => {
   return (
     <Flex
       as='section'
@@ -26,7 +13,7 @@ export const NotificationsState = () => {
       <Box>
         <Heading
           as='h2'
-          fontSize={{ base: '18px', md: '26px' }}
+          fontSize={{ base: '18px', md: '24px' }}
           w='fit-content' display='inline'
         >
           Notifications
@@ -36,9 +23,9 @@ export const NotificationsState = () => {
           display='inline'
           bgColor='primary.custom-blue'
           color='white'
-          fontSize={{ base: '15px', md: '20px' }}
+          fontSize={{ base: '15px', md: '18px' }}
           py='.4rem'
-          px={{ base: '.5rem', md: '1rem' }}
+          px={{ base: '.5rem', md: '.7rem' }}
           borderRadius='8px'
           fontWeight='800'
         >
@@ -48,7 +35,7 @@ export const NotificationsState = () => {
 
       <Button
         fontSize={{ base: '15px', md: '17px' }}
-        onClick={markAllAsRead}
+        onClick={handleCLick}
         color='neutral.grayish-blue'
         fontWeight='500'
         transition='.2s ease-in'

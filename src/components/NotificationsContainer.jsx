@@ -1,7 +1,20 @@
 import { Box } from '@chakra-ui/react'
 import { NotificationsState } from './NotificationsState'
+import { useEffect, useState } from 'react'
+import notificationsData from '../data.json'
 
 export const NotificationsContainer = () => {
+  const [notifications, setNotifications] = useState(null)
+
+  useEffect(() => {
+    const { newNotifications } = notificationsData
+    setNotifications(newNotifications)
+  }, [])
+
+  const markAllAsRead = () => {
+    setNotifications(0)
+  }
+
   return (
     <Box
       as='article'
@@ -14,7 +27,7 @@ export const NotificationsContainer = () => {
       boxShadow='md'
       p={{ md: '1rem' }}
     >
-      <NotificationsState />
+      <NotificationsState handleCLick={markAllAsRead} notifications={notifications} />
     </Box>
   )
 }

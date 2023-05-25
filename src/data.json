@@ -26,7 +26,7 @@
       "userphoto": "/src/assets/avatar-jacob-thompson.webp",
       "action": "has joined your group",
       "related": "Chess Club",
-      "date": "1day ago",
+      "date": "1 day ago",
       "read": false
     },
     {
@@ -35,7 +35,7 @@
       "userphoto": "/src/assets/avatar-rizky-hasanuddin.webp",
       "action": "sent you a private message",
       "message": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and i'm already having lots of fun and improving my game.",
-      "date": "5days ago",
+      "date": "5 days ago",
       "read": true
     },
     {

@@ -6,7 +6,7 @@ export const NotificationsState = ({ notifications, handleCLick }) => {
       as='section'
       h='fit-content'
       w='full'
-      p='.8rem'
+      p={{ base: '.4rem', md: '.8rem' }}
       justifyContent='space-between'
       alignItems='center'
     >

@@ -30,7 +30,7 @@ export const NotificationsContainer = () => {
     <Box
       as='article'
       bgColor='white'
-      w={{ base: '100%', md: '90%', lg: '70%' }}
+      w={{ base: '100%', md: '80%', lg: '50%' }}
       h='fit-content'
       display='flex'
       flexDirection='column'

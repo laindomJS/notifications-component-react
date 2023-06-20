@@ -1,30 +1,11 @@
 import { Box } from '@chakra-ui/react'
 import { NotificationsState } from './NotificationsState'
 import { NotificationItem } from './NotificationItem'
-import { useEffect, useState } from 'react'
-import notificationsData from '../data.json'
+import { useContext } from 'react'
+import { NotificationsContext } from '../context/NotificationsContext'
 
 export const NotificationsContainer = () => {
-  // Maybe all this logic, be fine in one context!
-  const [notifications, setNotifications] = useState(null)
-  const [allNotifications, setAllNotifications] = useState([])
-
-  useEffect(() => {
-    const { newNotifications } = notificationsData
-    setNotifications(newNotifications)
-
-    const { notifications } = notificationsData
-    setAllNotifications(notifications)
-  }, [])
-
-  const markAllAsRead = () => {
-    if (notifications !== 0) {
-      setNotifications(0)
-      allNotifications.forEach(notification => {
-        notification.read = true
-      })
-    }
-  }
+  const { allNotifications, notifications, markAllAsRead } = useContext(NotificationsContext)
 
   return (
     <Box

@@ -71,7 +71,7 @@ export const NotificationItem = ({ info }) => {
           : (
             <Box
               w='90%'
-              h={{ base: 'fit-content', md: 'fit-content', lg: '100px' }}
+              h='fit-content'
               border='1px solid'
               borderColor='neutral.grayish-blue'
               borderRadius='4px'
@@ -79,7 +79,7 @@ export const NotificationItem = ({ info }) => {
               padding='1rem'
               mx='10%'
             >
-              <Text fontSize='15px' color='neutral.dark-grayish-blue'>{info.message}</Text>
+              <Text fontSize='14px' color='neutral.dark-grayish-blue'>{info.message}</Text>
             </Box>
             )
       }
